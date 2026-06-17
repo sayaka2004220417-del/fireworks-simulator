@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>インタラクティブ花火シミュレータ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            /* ↓ここからレイアウトの魔法（横並びにする指示） */
+            display: flex;
+            align-items: flex-start;
+            /* 上端を揃える */
+            gap: 30px;
+            /* キャンバスと操作パネルの隙間 */
+        }
+
+        canvas {
+            border: 1px solid #555;
+            display: block;
+        }
+
+        /* スライダーを入れる縦長操作パネルの見た目 */
+        #ui-panel {
+            background-color: #333;
+            /* 少し明るいグレーにしてパネルっぽく */
+            padding: 20px;
+            border-radius: 8px;
+            /* 角を丸くする */
+            display: flex;
+            flex-direction: column;
+            /* パネルの中身（スライダー）は縦に並べる */
+            gap: 15px;
+            /* スライダー同士の隙間 */
+            min-width: 250px;
+            /* パネルの横幅 */
+        }
+
+        /* pタグ（文字）の余白をなくしてスッキリさせる */
+        #ui-panel p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ① キャンバスを入れるための空箱 -->
+    <div id="canvas-container"></div>
+
+    <!-- ② スライダーなどの操作UIを入れるための空箱 -->
+    <div id="ui-panel"></div>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>
